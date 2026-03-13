@@ -39,3 +39,5 @@ administración financiera 2026-1
 - solemne-01: 09 de abril
 - solemne-02: 28 de mayo
 - EXAMEN: 25 de junio
+
+FORMAR GRUPOS MÁXIMO 19 DE MARZO EN CANVAS.
