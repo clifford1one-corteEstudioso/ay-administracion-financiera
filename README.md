@@ -6,7 +6,6 @@ administración financiera 2026-1
 
 [DRIVE](https://1drv.ms/f/c/ead0435f51086119/IgC285KcNBIsSKxkzFOcnkELATzrZEw0YLgSuBsQC_L6Jz8?e=LXsk9c)
 
-
 ## Temario
 
 ## Unidad I: Conceptos Financieros
