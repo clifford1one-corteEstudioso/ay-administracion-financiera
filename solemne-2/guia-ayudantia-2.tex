@@ -1,0 +1,619 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{mdframed}
+\usepackage{xcolor}
+
+\geometry{
+  top=2.5cm,
+  bottom=2.5cm,
+  left=2.5cm,
+  right=2.5cm
+}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{DIS8012 -- 2026-1}
+\lhead{Ayudantía 2}
+\rfoot{Página \thepage}
+\lfoot{Administración Financiera}
+
+% Section formatting
+\titleformat{\section}[block]
+  {\large\bfseries\filcenter}
+  {}
+  {0em}
+  {\colorbox{black!85}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{\centering\color{white}#1}}}
+\titlespacing*{\section}{0pt}{1.2em}{0.8em}
+
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{0.8em}{0.3em}
+
+% Answer space commands
+\newcommand{\answerspace}{\vspace{4.5cm}}
+\newcommand{\lastanswerspace}{\vspace{2cm}}
+
+% Formula box
+\newmdenv[
+  linecolor=black,
+  linewidth=1pt,
+  innertopmargin=6pt,
+  innerbottommargin=6pt,
+  innerleftmargin=10pt,
+  innerrightmargin=10pt,
+  backgroundcolor=gray!10
+]{formulabox}
+
+\begin{document}
+
+% ─── TITLE ────────────────────────────────────────────────────────────────────
+\begin{center}
+  {\LARGE \textbf{Ayudantía 2 -- Guía de Ejercicios}}\\[0.4em]
+  {\large DIS8012 · Administración Financiera · 2026-1}\\[0.2em]
+  {\normalsize Resuelve cada ejercicio en el espacio indicado.}
+\end{center}
+
+\vspace{0.5em}
+\noindent\rule{\textwidth}{0.8pt}
+\vspace{0.3em}
+
+% ─── FORMULARIO DE REFERENCIA ────────────────────────────────────────────────
+\subsection*{Formulario de Referencia}
+
+\begin{formulabox}
+\begin{center}
+\renewcommand{\arraystretch}{2.2}
+\begin{tabular}{ll}
+  \textbf{Costo Variable Unitario} & $cv = \dfrac{\text{Costos Variables Totales}}{\text{Unidades producidas}}$ \\[4pt]
+  \textbf{Costo Fijo Unitario}     & $cf = \dfrac{\text{Costos Fijos Totales}}{\text{Unidades producidas}}$ \\[4pt]
+  \textbf{Costo Total}             & $CT = F + (cv \times Q)$ \\[4pt]
+  \textbf{Punto de Equilibrio}     & $Q_{eq} = \dfrac{F}{p - c}$ \\[4pt]
+  \textbf{Ingresos Totales}        & $IT = p \times Q$ \\[4pt]
+  \textbf{Valor Presente}          & $VP = \dfrac{VF}{(1+i)^n}$ \quad\quad \textbf{Valor Futuro:} $VF = VP \cdot (1+i)^n$ \\
+\end{tabular}
+\end{center}
+\end{formulabox}
+
+\vspace{0.6em}
+\noindent\rule{\textwidth}{0.8pt}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Costo Variable Unitario ($cv$)}
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\begin{enumerate}[label=\textbf{\alph*.}, leftmargin=*, itemsep=0pt]
+
+\item Una empresa de calzado tiene costos variables totales de \$500.000 para una producción de 2.000 pares de zapatos. ¿Cuál es el costo variable unitario?
+\answerspace
+
+\item Para fabricar un escritorio, una carpintería gasta \$15.000 en madera y \$3.000 en barniz y clavos. Si estos son sus únicos costos variables, calcule el $cv$ por escritorio.
+\answerspace
+
+\item Una fábrica de poleras produce actualmente 5.000 unidades con un costo variable total de \$25.000. Si la producción aumenta a 8.000 unidades, ¿cuál será el nuevo costo variable unitario? \textit{(Pista: el $cv$ se mantiene constante ante cambios en el volumen.)}
+\answerspace
+
+\item Una empresa de tecnología gasta \$1.200 en componentes para armar un lote de 40 audífonos. ¿A cuánto asciende el costo variable por cada audífono?
+\answerspace
+
+\item El costo total de producir 1.000 unidades es de \$15.000. Si los costos fijos de la empresa son \$5.000, determine primero el costo variable total y luego el costo variable unitario.
+\answerspace
+
+\item Una imprenta utiliza 50 gramos de papel especial para cada invitación. Si el gramo de papel cuesta \$0,1, calcule el costo variable unitario por invitación.
+\answerspace
+
+\item Una empresa tiene costos fijos de \$10.000 y vende su producto a \$4,5. Si su punto de equilibrio se alcanza al vender 5.000 unidades, despeje el costo variable unitario usando la fórmula $Q = \dfrac{F}{p-c}$.
+\answerspace
+
+\item La Empresa A produce 2.000 unidades con un costo variable total de \$10.000. La Empresa B produce 2.500 unidades con un costo variable total de \$15.000. ¿Qué empresa tiene el costo variable unitario más bajo?
+\answerspace
+
+\item Un restaurante de pizzas gasta \$2.000 en masa y queso por pizza, y paga una comisión de \$500 al repartidor por cada entrega realizada. ¿Cuál es el costo variable unitario total de una pizza entregada?
+\answerspace
+
+\item Una fábrica de jeans tiene costos semanales de producción de \$220 para una producción de 40 jeans. Calcule el costo variable unitario (asumiendo que todos los costos de producción mencionados son variables).
+\lastanswerspace
+
+\end{enumerate}
+
+\newpage
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Costo Fijo Unitario ($cf$)}
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*, itemsep=0pt]
+
+\item Una empresa paga \$450.000 en costos fijos totales y produce 10.000 unidades. ¿Cuál es su costo fijo unitario?
+\answerspace
+
+\item La misma empresa del ejercicio anterior aumenta su producción a 15.000 unidades manteniendo sus costos fijos en \$450.000. ¿Cuál es el nuevo costo fijo unitario?
+\answerspace
+
+\item Un taller tiene un arriendo de \$125 y paga \$60 en servicios básicos mensuales. Si produce 100 jeans al mes, calcule el costo fijo unitario considerando ambos gastos como fijos.
+\answerspace
+
+\item El costo total de producir 500 lámparas es de \$12.000. Si el costo variable total es de \$7.000, determine primero el costo fijo total y luego el costo fijo unitario.
+\answerspace
+
+\item Una fábrica tiene capacidad para 16.000 unidades, pero actualmente solo produce 8.000. Si sus costos fijos totales son \$240.000, calcule el $cf$ actual.
+\answerspace
+
+\item Usando los datos del ejercicio anterior, ¿cuál sería el $cf$ si la fábrica decidiera operar a su máxima capacidad (16.000 unidades)?
+\answerspace
+
+\item Si el costo fijo unitario de un producto es de \$12 cuando se producen 2.000 unidades, ¿a cuánto ascienden los costos fijos totales de la empresa?
+\answerspace
+
+\item Una empresa tiene costos fijos de \$10.000 y alcanza su punto de equilibrio al vender 5.000 unidades. ¿Cuál es el costo fijo unitario en ese punto exacto?
+\answerspace
+
+\item La Empresa A tiene costos fijos de \$5.000 y produce 1.000 unidades. La Empresa B tiene costos fijos de \$8.000 y produce 2.000 unidades. ¿Cuál tiene un costo fijo unitario más bajo?
+\answerspace
+
+\item Una empresa paga \$3.000 en sueldos administrativos y \$2.000 en seguros de equipos. Si en un mes se fabrican 2.500 unidades, ¿cuál es el costo fijo unitario total?
+\lastanswerspace
+
+\end{enumerate}
+
+\newpage
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Costo Total ($CT$)}
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*, itemsep=0pt]
+
+\item Una empresa tiene costos fijos mensuales de \$5.000 y un costo variable unitario de \$2. Si produce 1.500 unidades en el mes, ¿cuál es su costo total?
+\answerspace
+
+\item Una empresa tiene costos variables de \$200.000 y costos fijos de \$450.000 para una producción de 10.000 unidades. Calcule el costo total de operación.
+\answerspace
+
+\item Usando los datos del ejercicio anterior, si la producción aumenta a 15.000 unidades y el costo variable unitario se mantiene en \$20, calcule el nuevo costo total. \textit{(Recuerda: el costo fijo total no cambia.)}
+\answerspace
+
+\item Un taller tiene un arriendo de \$125, paga \$60 en servicios y gasta \$237 en materiales para la producción del mes. ¿A cuánto asciende el costo total mensual?
+\answerspace
+
+\item Se compra una máquina cuya cuota mensual es de \$308 y el arriendo es de \$80. Para producir 100 unidades, se gastan 20 gramos de tinta por unidad a un precio de \$0,5 el gramo. Calcule el costo total de producir esas 100 unidades.
+\answerspace
+
+\item El costo total de producir 2.000 lámparas es de \$18.000 y se sabe que el costo variable unitario es de \$5. Determine a cuánto ascienden los costos fijos de la fábrica.
+\answerspace
+
+\item Una empresa alcanza su equilibrio vendiendo 5.000 unidades a un precio de \$4,5 cada una. En el punto de equilibrio, los Ingresos Totales son iguales a los Costos Totales. ¿Cuál es el costo total en ese punto?
+\answerspace
+
+\item Un emprendedor paga un seguro fijo de \$1.000 al mes. Cada unidad que fabrica le cuesta \$15 en materias primas y \$5 en mano de obra directa. Calcule el costo total si fabrica 300 unidades.
+\answerspace
+
+\item Determine cuál alternativa tiene un Costo Total menor si se planean producir 20 unidades:
+  \begin{itemize}
+    \item \textbf{Alternativa A:} Costos fijos \$80 y costo variable unitario \$10.
+    \item \textbf{Alternativa B:} Costos fijos \$50 y costo variable unitario \$12.
+  \end{itemize}
+\answerspace
+
+\item Una empresa fabrica 1.000 unidades. Su costo fijo unitario es de \$45 y su costo variable unitario es de \$20. ¿Cuál es el costo total de la producción?
+\lastanswerspace
+
+\end{enumerate}
+
+\newpage
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Cantidad de Equilibrio ($Q_{eq}$)}
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*, itemsep=0pt]
+
+\item Una empresa tiene costos fijos de \$10.000, costos variables de \$2,5 por unidad y el precio de venta es de \$4,5. Calcule las unidades de equilibrio.
+\answerspace
+
+\item Los costos fijos de una empresa son \$5.000 y el precio de venta unitario es \$4,5. Si producir 100 unidades tiene un costo variable de \$250, determine la cantidad de equilibrio. \textit{(Pista: calcula primero el $cv$.)}
+\answerspace
+
+\item Usando los datos del ejercicio anterior, calcula el punto de equilibrio expresado en dinero (ventas totales).
+\answerspace
+
+\item Una empresa tiene costos fijos de \$17.500. El precio de venta es \$14,5 y el costo variable es de \$180 por cada 175 unidades producidas. Calcule las unidades de equilibrio redondeando al entero más cercano.
+\answerspace
+
+\item Una empresa tiene costos fijos de \$8.000, un costo variable unitario de \$10 y vende su producto a \$20. Calcula su $Q_{eq}$. ¿Qué ocurre si el precio de venta sube a \$25?
+\answerspace
+
+\item Una fábrica produce a un costo variable de \$5 y vende a \$15. Sus costos fijos suben de \$1.000 a \$1.500 por aumento del arriendo. ¿Cuántas unidades adicionales debe vender para mantenerse en equilibrio?
+\answerspace
+
+\item Un emprendedor sabe que su punto de equilibrio es de 500 unidades. Si vende cada unidad a \$100 y su costo variable unitario es de \$60, determina a cuánto ascienden sus costos fijos.
+\answerspace
+
+\item Una empresa tiene costos fijos de \$12.000 y un costo variable unitario de \$40. Si su capacidad máxima de producción es de 1.000 unidades y desea que ese sea su punto de equilibrio, ¿a qué precio mínimo debe vender cada producto?
+\answerspace
+
+\item Una empresa de jeans tiene costos fijos de \$185 y costos variables de \$15 por unidad. Si el precio de venta por jean es de \$30, calcula el $Q_{eq}$.
+\answerspace
+
+\item Determina cuál proyecto requiere vender menos unidades para alcanzar el punto de equilibrio:
+  \begin{itemize}
+    \item \textbf{Proyecto A:} Fijos \$2.000, Precio \$50, Variable \$30.
+    \item \textbf{Proyecto B:} Fijos \$3.000, Precio \$60, Variable \$30.
+  \end{itemize}
+\lastanswerspace
+
+\end{enumerate}
+
+\newpage
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Ingresos Totales ($IT$)}
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*, itemsep=0pt]
+
+\item Una empresa vende su producto a \$12,5. Si logra vender 100 unidades en un mes, ¿cuál es su ingreso total mensual?
+\answerspace
+
+\item Una empresa alcanza su punto de equilibrio al vender 5.000 unidades a un precio de \$4,5. ¿A cuánto ascienden sus ingresos totales en ese punto?
+\answerspace
+
+\item Se estima una venta mensual constante de \$640. ¿Cuál será el ingreso total acumulado al finalizar los 12 meses?
+\answerspace
+
+\item Una empresa produce 10.000 unidades y fija un precio de venta de \$75 por unidad. ¿Cuál sería el ingreso total esperado?
+\answerspace
+
+\item Una empresa reporta ingresos totales por \$18.836 y el precio de venta unitario es de \$14,5. ¿Cuántas unidades vendió aproximadamente?
+\answerspace
+
+\item Una empresa vende sus productos por \$640 y además vende una máquina usada en \$700. ¿Cuál es el ingreso total percibido en ese periodo?
+\answerspace
+
+\item Una empresa vende 2.500 unidades a \$4,5 cada una. Si decide subir el precio a \$6 manteniendo el mismo volumen de ventas, ¿en cuánto aumentan sus ingresos totales?
+\answerspace
+
+\item Una empresa tiene capacidad de producción de 16.000 unidades. Si venden toda su capacidad a un precio de \$50, ¿cuál es el ingreso total máximo que pueden generar?
+\answerspace
+
+\item Determina cuál proyecto genera mayores ingresos totales:
+  \begin{itemize}
+    \item \textbf{Proyecto A:} Vende 100 unidades a \$12,5 cada una.
+    \item \textbf{Proyecto B:} Vende 80 unidades a \$15 cada una.
+  \end{itemize}
+\answerspace
+
+\item Una empresa tiene costos fijos de \$17.500 y costos variables de \$1,03 por unidad. Su punto de equilibrio es de 1.299 unidades a un precio de \$14,5. Demuestra que el ingreso total iguala a los costos totales en ese punto.
+\lastanswerspace
+
+\end{enumerate}
+
+\newpage
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Punto de Equilibrio}
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*, itemsep=0pt]
+
+\item Una empresa tiene costos fijos de \$10.000, un precio de venta de \$4,5 y costos variables de \$2,5 por unidad. ¿Cuántas unidades debe vender para alcanzar el punto de equilibrio?
+\answerspace
+
+\item Los costos fijos son de \$5.000 y el precio de venta unitario es de \$4,5. Si producir 100 unidades tiene un costo variable total de \$250, determina la cantidad de equilibrio.
+\answerspace
+
+\item Con los datos del ejercicio anterior ($Q_{eq} = 2.500$ unidades y precio \$4,5), calcula el punto de equilibrio expresado en unidades monetarias.
+\answerspace
+
+\item Una empresa tiene costos fijos de \$17.500. El precio de venta es \$14,5 y el costo variable es de \$180 por cada 175 unidades. Calcula las unidades de equilibrio redondeando al entero más cercano.
+\answerspace
+
+\item Con los datos del ejercicio anterior ($Q_{eq} = 1.299$ unidades y precio \$14,5), determina el ingreso total necesario para no tener pérdidas.
+\answerspace
+
+\item Una empresa tiene costos fijos de \$450.000 y un costo variable unitario de \$20. Si fijan un precio de venta de \$70, ¿alcanza su punto de equilibrio dentro de su capacidad máxima de 16.000 unidades?
+\answerspace
+
+\item Una empresa de jeans tiene costos fijos de \$185, precio de venta \$30 y costo variable \$15. Calcula el $Q_{eq}$. ¿Qué ocurre si los costos fijos suben a \$300?
+\answerspace
+
+\item Un emprendedor tiene costos fijos de \$10.000 y costos variables de \$2,5 por unidad. Si solo puede producir y vender 2.000 unidades, ¿a qué precio debe vender cada una para que ese sea su punto de equilibrio?
+\answerspace
+
+\item Si una empresa logra bajar su costo variable unitario de \$2,5 a \$1,5, manteniendo costos fijos de \$5.000 y un precio de \$4,5, ¿en cuántas unidades se reduce su punto de equilibrio?
+\answerspace
+
+\item Demuestra que en el punto de equilibrio ($Q = 5.000$, $p = 4{,}5$, $c = 2{,}5$, $F = 10.000$) los Ingresos Totales son exactamente iguales a los Costos Totales, es decir que $p \cdot Q = F + c \cdot Q$.
+\lastanswerspace
+
+\end{enumerate}
+
+\newpage
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Valor Presente ($VP$)}
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*, itemsep=0pt]
+
+\item Si una inversión promete entregarte \$1.200 en 5 años, ¿cuánto vale ese dinero hoy si la tasa de interés es del 3\%?
+\answerspace
+
+\item Calcula el valor hoy de esos mismos \$1.200, pero considerando que se recibirán en 3 años en lugar de 5, manteniendo la tasa del 3\%.
+\answerspace
+
+\item Patricio Lucas tiene un contrato por 7 temporadas donde recibirá \$400.000 por cada una. Si su costo alternativo es del 10\%, ¿cuál es el valor presente total de ese contrato?
+\answerspace
+
+\item Siguiendo el caso anterior, si le ofrecen \$1.900.000 pagados hoy mismo en lugar de las cuotas anuales, ¿cuál opción tiene un valor presente mayor?
+\answerspace
+
+\item Si tienes \$100 hoy y la tasa de interés es del 10\%, ¿cuánto valdrían en un año si los depositas en el banco? ¿Cuál es el valor presente de esos \$110 futuros?
+\answerspace
+
+\item Una máquina se vende en \$700 en el mes 12 de un proyecto. Calcula el valor presente de esa venta con una tasa mensual del 1\%.
+\answerspace
+
+\item Una empresa necesita tener \$10.000 en 6 años para renovar equipos. Con una tasa del 6,5\%, ¿cuánto debe invertir hoy para alcanzar esa meta?
+\answerspace
+
+\item Determina el VP de un pago de \$500 que se recibirá en 2 años, utilizando una tasa de rentabilidad del 4\%.
+\answerspace
+
+\item Un proyecto espera vender sus máquinas por \$400 al finalizar el segundo año. Calcula el VP de este ingreso si la tasa exigida es del 10\%.
+\answerspace
+
+\item Calcula el VP de \$1.000 a recibir en 1 año con un 10\% de tasa. ¿Por qué ese resultado confirma que un peso futuro vale menos que un peso hoy?
+\lastanswerspace
+
+\end{enumerate}
+
+\newpage
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Valor Presente Neto ($VAN$)}
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*, itemsep=0pt]
+
+\item Para una inversión inicial de \$1.000 se proyectan 4 cuotas de retorno de \$350 cada una. Si el inversionista exige un 10\% de rentabilidad, ¿cuál es el VAN?
+\answerspace
+
+\item Basado en el resultado anterior ($VAN = \$109{,}45$), ¿le aconsejarías al inversionista realizar el proyecto? Justifica tu respuesta.
+\answerspace
+
+\item Calcula el VAN de un proyecto con inversión inicial de \$25.000 y los siguientes flujos: Año 1: \$8.000, Año 2: \$6.000, Años 3 y 4: \$0, Año 5: \$10.000, Año 6: \$10.000. Usa una tasa del 6,5\%.
+\answerspace
+
+\item Un emprendedor con costo de oportunidad del 8\% debe elegir entre:
+  \begin{itemize}
+    \item \textbf{Alt.\ 1:} Inversión de \$1.200 con retornos de \$354, \$123 y \$1.876 en los meses 1, 2 y 3.
+    \item \textbf{Alt.\ 2:} Arrendar una máquina con flujos de \$845, \$656 y \$754.
+  \end{itemize}
+  ¿Qué alternativa es más conveniente según el VAN?
+\answerspace
+
+\item Se compra una máquina de \$1.500 que produce 100 unidades mensuales vendidas a \$12,5 cada una. Si el interés es del 0,4\% mensual, calcula el VAN al finalizar el periodo.
+\answerspace
+
+\item Calcula el VAN de una inversión de \$2.000 que solo devuelve \$500 anuales por 3 años con una tasa del 15\%. ¿Es rentable?
+\answerspace
+
+\item Si un proyecto tiene un VAN de 0, ¿qué significa esto para el inversionista respecto a su tasa mínima exigida?
+\answerspace
+
+\item Un proyecto de diseño requiere \$5.000 de inversión y genera \$2.000 anuales durante 3 años. Si la tasa es del 7\%, calcula el VAN.
+\answerspace
+
+\item Calcula el VAN de un proyecto que requiere \$1.500, genera \$600 anuales por 3 años y permite vender el equipo al final en \$400, con una tasa del 10\%.
+\answerspace
+
+\item Un inversionista evalúa dos proyectos con tasa del 10\%:
+  \begin{itemize}
+    \item \textbf{Proyecto X:} Inversión \$3.000; flujos anuales de \$1.200 por 3 años.
+    \item \textbf{Proyecto Y:} Inversión \$4.000; flujos anuales de \$1.500 por 3 años.
+  \end{itemize}
+  Calcula el VAN de ambos y determina cuál es más conveniente.
+\lastanswerspace
+
+\end{enumerate}
+
+\vspace{1em}
+\noindent\rule{\textwidth}{0.8pt}
+\begin{center}
+  \small\textit{Recuerda: VAN $> 0$ → proyecto conveniente \quad · \quad VAN $= 0$ → indiferente \quad · \quad VAN $< 0$ → no conveniente}
+\end{center}
+
+\newpage
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{ITEM-01: Diferenciación de Costos Fijos y Variables}
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\noindent\textit{Contexto: Un nuevo emprendimiento de fabricación de jeans está organizando sus cuentas mensuales.}
+
+\vspace{0.5em}
+\noindent Clasifica los siguientes desembolsos como \textbf{Costo Fijo (CF)} o \textbf{Costo Variable (CV)} y justifica tu respuesta:
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*, itemsep=0pt]
+
+\item El pago del alquiler del taller de costura.
+\answerspace
+
+\item La compra de tela de mezclilla (materia prima) para los pantalones.
+\answerspace
+
+\item El seguro contra incendios de la maquinaria.
+\answerspace
+
+\item Las comisiones pagadas a los vendedores por cada jean vendido.
+\answerspace
+
+\item El servicio de internet de banda ancha de la oficina.
+\lastanswerspace
+
+\end{enumerate}
+
+\newpage
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{ITEM-02: El Efecto del Volumen en los Costos Unitarios}
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\noindent\textit{Contexto: La empresa ``Los Pitufos'' produce actualmente 10.000 unidades. Sus costos totales son de \$450.000 en costos fijos y \$200.000 en costos variables.}
+
+\vspace{0.5em}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*, itemsep=0pt]
+
+\item Calcula el \textbf{costo fijo unitario} y el \textbf{costo variable unitario} para el nivel de producción actual (10.000 unidades).
+\answerspace
+
+\item \textbf{Escenario de crecimiento:} Si la producción aumenta a 15.000 unidades, ¿cuál será el nuevo costo fijo unitario y el nuevo costo variable total?
+\lastanswerspace
+
+\end{enumerate}
+
+\newpage
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{ITEM-03: Cálculo del Punto de Equilibrio}
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\noindent\textit{Contexto: Un restaurante analiza la rentabilidad de su plato estrella, ``Carne con arroz'', con los siguientes datos:}
+
+\vspace{0.4em}
+\begin{itemize}[leftmargin=2cm, itemsep=2pt]
+  \item Precio de venta por plato: \$14,5
+  \item Costos variables (ingredientes y empaques): \$2,5 por plato
+  \item Costos fijos mensuales (alquiler, sueldos, servicios): \$10.000
+\end{itemize}
+\vspace{0.4em}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*, itemsep=0pt]
+
+\item Calcula cuántos platos debe vender el restaurante al mes para alcanzar su punto de equilibrio (beneficio = 0).
+\answerspace
+
+\item Si el restaurante logra vender 1.200 platos, ¿está generando ganancias o pérdidas? Justifica usando la fórmula de Ingresos Totales vs.\ Costos Totales.
+\lastanswerspace
+
+\end{enumerate}
+
+\newpage
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{ITEM-04: Flujo de Caja}
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\noindent\textit{Contexto: Tienes un emprendimiento que produce y vende jeans. Construye un flujo de caja mensual para el primer año con los siguientes datos:}
+
+\vspace{0.4em}
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2cm, itemsep=3pt]
+  \item \textbf{Ventas:} \$640 cada mes.
+  \item \textbf{Inversión en Maquinaria:}
+    \begin{itemize}
+      \item Mes 1: se compra una máquina por \$1.850, pagada en 6 cuotas iguales de \$308 (enero a junio).
+      \item Mes 12: se vende esa máquina por \$700 y se compra una nueva por \$2.000.
+    \end{itemize}
+  \item \textbf{Costos Variables:} \$55 a la semana $\times$ 4,3 semanas = \$237 al mes.
+  \item \textbf{Costos Fijos mensuales:} Alquiler \$125 · Servicios \$60.
+\end{enumerate}
+\vspace{0.6em}
+
+\noindent Completa la tabla de flujo de caja a continuación:
+
+\vspace{0.8em}
+\noindent\resizebox{\textwidth}{!}{%
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|l|*{12}{c|}}
+\hline
+\textbf{Concepto} & \textbf{M1} & \textbf{M2} & \textbf{M3} & \textbf{M4} & \textbf{M5} & \textbf{M6} & \textbf{M7} & \textbf{M8} & \textbf{M9} & \textbf{M10} & \textbf{M11} & \textbf{M12} \\
+\hline
+Ingresos por ventas & & & & & & & & & & & & \\
+\hline
+Venta de máquina & & & & & & & & & & & & \\
+\hline
+Cuota máquina & & & & & & & & & & & & \\
+\hline
+Compra nueva máquina & & & & & & & & & & & & \\
+\hline
+Costos variables & & & & & & & & & & & & \\
+\hline
+Alquiler & & & & & & & & & & & & \\
+\hline
+Servicios & & & & & & & & & & & & \\
+\hline
+\textbf{Flujo Neto} & & & & & & & & & & & & \\
+\hline
+\end{tabular}%
+}
+
+\vspace{1.5cm}
+
+\newpage
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{ITEM-05: Valor del Dinero en el Tiempo}
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*, itemsep=0pt]
+
+\item \textbf{Valor Presente (VP):} Una persona recibirá \$1.000.000 dentro de 3 años. La tasa de interés anual es del 10\%. ¿Cuál es el valor presente de ese dinero hoy?
+
+\vspace{0.3em}
+\noindent\textit{Datos: $VF = 1.000.000$ \quad $i = 0{,}10$ \quad $n = 3$}
+\answerspace
+
+\item \textbf{Valor Futuro (VF):} Inviertes hoy \$500.000 a una tasa de interés anual del 8\% durante 4 años. ¿Cuánto dinero tendrás al final?
+
+\vspace{0.3em}
+\noindent\textit{Datos: $VP = 500.000$ \quad $i = 0{,}08$ \quad $n = 4$}
+\answerspace
+
+\item \textbf{Comparación de contratos (VP):} A un cantante le ofrecen dos tipos de contrato. Analiza cuál le conviene más:
+  \begin{itemize}
+    \item \textbf{Opción A:} US\$~300.000 al final de cada año durante 6 años.
+    \item \textbf{Opción B:} Un pago único de US\$~1.300.000 hoy.
+  \end{itemize}
+  La tasa de descuento (costo de oportunidad) es del 9\% anual. Calcula el VP de la Opción A y compáralo con la Opción B.
+\answerspace
+
+\item \textbf{Valor Actual Neto (VAN):} Calcula el VAN del siguiente proyecto si la tasa de interés anual es del 25\%:
+
+\vspace{0.5em}
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|c|r|}
+\hline
+\textbf{Año} & \textbf{Flujo} \\
+\hline
+0 & $-$300.000 \\
+1 & 145.000 \\
+2 & 95.000 \\
+3 & 37.000 \\
+4 & 256.000 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{0.4em}
+¿Es conveniente realizar este proyecto? Justifica.
+\lastanswerspace
+
+\end{enumerate}
+
+\vspace{1em}
+\noindent\rule{\textwidth}{0.8pt}
+\begin{center}
+  \small\textit{Recuerda: VAN $> 0$ → proyecto conveniente \quad · \quad VAN $= 0$ → indiferente \quad · \quad VAN $< 0$ → no conveniente}
+\end{center}
+
+\end{document}
